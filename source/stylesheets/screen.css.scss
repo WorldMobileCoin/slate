@@ -59,6 +59,7 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
+  background: $nav-bg-gradient;
   font-size: 13px;
   font-weight: bold;
 
@@ -82,7 +83,7 @@ html, body {
     position: relative;
 
     input {
-      background: $nav-bg;
+      background: $nav-search-bg;
       border-width: 0 0 1px 0;
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
@@ -353,7 +354,7 @@ html, body {
     margin-top: 2em;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    background-color: #fdfdfd;
+    background-color: #e1e1f1;
   }
 
   h1:first-child, div:first-child + h1 {
@@ -450,7 +451,7 @@ html, body {
 
   code {
     background-color: rgba(0,0,0,0.05);
-    padding: 3px;
+    padding: 3px 5px;
     border-radius: 3px;
     @extend %break-words;
     @extend %code-font;
@@ -469,6 +470,14 @@ html, body {
     background: $aside-notice-bg;
     line-height: 1.6;
 
+    &.notice2 {
+      background-color: $aside-notice2-bg;
+    }
+
+    &.notice3 {
+      background-color: $aside-notice2-bg;
+    }
+
     &.warning {
       background-color: $aside-warning-bg;
     }
@@ -485,6 +494,14 @@ html, body {
   }
 
   aside.notice:before {
+    @extend %icon-info-sign;
+  }
+
+  aside.notice2:before {
+    @extend %icon-info-sign;
+  }
+
+  aside.notice3:before {
     @extend %icon-info-sign;
   }
 
