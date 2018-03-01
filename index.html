@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>WMCC API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell--cURL&quot;,&quot;shell--CLI&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,10 +211,9 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="shell--cURL">CURL</a>
+              <a href="#" data-language-name="shell--CLI">CLI</a>
+              <a href="#" data-language-name="javascript">Javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,27 +221,140 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#auth" class="toc-h2 toc-link" data-title="auth">Auth</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#configuring-clients" class="toc-h1 toc-link" data-title="configuring-clients">Configuring Clients</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#default-listeners" class="toc-h2 toc-link" data-title="default-listeners">Default Listeners</a>
+                  </li>
+                  <li>
+                    <a href="#configuring-wmcc-cli" class="toc-h2 toc-link" data-title="configuring-wmcc-cli">Configuring WMCC CLI</a>
+                  </li>
+                  <li>
+                    <a href="#using-javascript-client" class="toc-h2 toc-link" data-title="using-javascript-client">Using Javascript Client</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#node" class="toc-h1 toc-link" data-title="node">Node</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#json-rpc-requests" class="toc-h2 toc-link" data-title="json-rpc-requests">JSON-RPC Requests</a>
+                  </li>
+                  <li>
+                    <a href="#get-server-info" class="toc-h2 toc-link" data-title="get-server-info">Get server info</a>
+                  </li>
+                  <li>
+                    <a href="#get-mempool-snapshot" class="toc-h2 toc-link" data-title="get-mempool-snapshot">Get mempool snapshot</a>
+                  </li>
+                  <li>
+                    <a href="#get-block-by-hash-or-height" class="toc-h2 toc-link" data-title="get-block-by-hash-or-height">Get block by hash or height</a>
+                  </li>
+                  <li>
+                    <a href="#broadcast-transaction" class="toc-h2 toc-link" data-title="broadcast-transaction">Broadcast transaction</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rpc-calls-node" class="toc-h1 toc-link" data-title="rpc-calls-node">RPC Calls - Node</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-parameters-rpc" class="toc-h2 toc-link" data-title="post-parameters-rpc">POST Parameters RPC</a>
+                  </li>
+                  <li>
+                    <a href="#stop" class="toc-h2 toc-link" data-title="stop">stop</a>
+                  </li>
+                  <li>
+                    <a href="#getinfo" class="toc-h2 toc-link" data-title="getinfo">getinfo</a>
+                  </li>
+                  <li>
+                    <a href="#getmemoryinfo" class="toc-h2 toc-link" data-title="getmemoryinfo">getmemoryinfo</a>
+                  </li>
+                  <li>
+                    <a href="#setloglevel" class="toc-h2 toc-link" data-title="setloglevel">setloglevel</a>
+                  </li>
+                  <li>
+                    <a href="#validateaddress" class="toc-h2 toc-link" data-title="validateaddress">validateaddress</a>
+                  </li>
+                  <li>
+                    <a href="#createmultisig" class="toc-h2 toc-link" data-title="createmultisig">createmultisig</a>
+                  </li>
+                  <li>
+                    <a href="#createwitnessaddress" class="toc-h2 toc-link" data-title="createwitnessaddress">createwitnessaddress</a>
+                  </li>
+                  <li>
+                    <a href="#signmessagewithprivkey" class="toc-h2 toc-link" data-title="signmessagewithprivkey">signmessagewithprivkey</a>
+                  </li>
+                  <li>
+                    <a href="#verifymessage" class="toc-h2 toc-link" data-title="verifymessage">verifymessage</a>
+                  </li>
+                  <li>
+                    <a href="#setmocktime" class="toc-h2 toc-link" data-title="setmocktime">setmocktime</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rpc-calls-chain" class="toc-h1 toc-link" data-title="rpc-calls-chain">RPC Calls - Chain</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#pruneblockchain" class="toc-h2 toc-link" data-title="pruneblockchain">pruneblockchain</a>
+                  </li>
+                  <li>
+                    <a href="#invalidateblock" class="toc-h2 toc-link" data-title="invalidateblock">invalidateblock</a>
+                  </li>
+                  <li>
+                    <a href="#reconsiderblock" class="toc-h2 toc-link" data-title="reconsiderblock">reconsiderblock</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rpc-calls-block" class="toc-h1 toc-link" data-title="rpc-calls-block">RPC Calls - Block</a>
+          </li>
+          <li>
+            <a href="#rpc-calls-mempool" class="toc-h1 toc-link" data-title="rpc-calls-mempool">RPC Calls - Mempool</a>
+          </li>
+          <li>
+            <a href="#rpc-calls-transactions" class="toc-h1 toc-link" data-title="rpc-calls-transactions">RPC Calls - Transactions</a>
+          </li>
+          <li>
+            <a href="#rpc-calls-mining" class="toc-h1 toc-link" data-title="rpc-calls-mining">RPC Calls - Mining</a>
+          </li>
+          <li>
+            <a href="#rpc-calls-network" class="toc-h1 toc-link" data-title="rpc-calls-network">RPC Calls - Network</a>
+          </li>
+          <li>
+            <a href="#coin" class="toc-h1 toc-link" data-title="coin">Coin</a>
+          </li>
+          <li>
+            <a href="#transaction" class="toc-h1 toc-link" data-title="transaction">Transaction</a>
+          </li>
+          <li>
+            <a href="#wallet-admin" class="toc-h1 toc-link" data-title="wallet-admin">Wallet Admin</a>
+          </li>
+          <li>
+            <a href="#wallet" class="toc-h1 toc-link" data-title="wallet">Wallet</a>
+          </li>
+          <li>
+            <a href="#wallet-transactions" class="toc-h1 toc-link" data-title="wallet-transactions">Wallet Transactions</a>
+          </li>
+          <li>
+            <a href="#wallet-accounts" class="toc-h1 toc-link" data-title="wallet-accounts">Wallet Accounts</a>
+          </li>
+          <li>
+            <a href="#wallet-events" class="toc-h1 toc-link" data-title="wallet-events">Wallet Events</a>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -254,133 +366,406 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the WMCC API!</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<p>The default WMCC HTTP server listens on the standard RPC port <code>7880</code>.
+It exposes a REST json api, as well as a JSON-RPC api.</p>
+<h1 id='authentication'>Authentication</h1><h2 id='auth'>Auth</h2>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<pre class="highlight shell tab-shell--cURL"><code>curl http://x:[api-key]@127.0.0.1:7880/
+</code></pre><pre class="highlight shell tab-shell--CLI"><code><span class="nb">export </span><span class="nv">WMCC_API_KEY</span><span class="o">=[</span>api-key]
+wmcc cli info
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">Core</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wmcc-core'</span><span class="p">);</span>
+<span class="c1">// http client</span>
+<span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">({</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="p">[</span><span class="nx">api</span><span class="o">-</span><span class="nx">key</span><span class="p">],</span>
+  <span class="c1">//...</span>
+<span class="p">});</span>
+<span class="c1">// Or wallet</span>
+<span class="kr">const</span> <span class="nx">wallet</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">({</span>
+  <span class="na">apiKey</span><span class="p">:</span> <span class="p">[</span><span class="nx">api</span><span class="o">-</span><span class="nx">key</span><span class="p">],</span>
+  <span class="c1">//...</span>
+<span class="p">});</span>
 </code></pre>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Make sure to replace <code>[api-key]</code> with your API key.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>Auth is accomplished via HTTP Basic Auth, using your node&#39;s API key (passed via --api-key).</p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace `[api-key]` with your personal API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<aside class="notice2">
+If you intend to use API via network and setup `api-key`, make sure to setup `ssl` too.
+</aside>
+<h1 id='configuring-clients'>Configuring Clients</h1><h2 id='default-listeners'>Default Listeners</h2><pre class="highlight shell tab-shell"><code><span class="c"># With curl you just send HTTP Requests based on further docs</span>
+<span class="c"># Only thing to have in mind is Authentication, which is described in Auth section.</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+curl http://127.0.0.1:7880/ <span class="c"># will get info from mainnet</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p>By default API listens on this address:</p>
+
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>Network</th>
+<th>API Port</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mainnet</td>
+<td>7880</td>
+</tr>
+</tbody></table>
+
+<p>You can interact with wmcc with REST Api as well as RPC, there are couple of ways you can use API.  </p>
+
+<ul>
+<li><code>cURL</code> - You can use direct HTTP calls for invoking REST/RPC API calls.</li>
+<li><code>CLI</code> - wmcc cli has almost all methods described to be used.</li>
+<li><code>Javascript</code> - Clients used by <code>wmcc cli</code> can be used directly from javascript.</li>
+</ul>
+<h2 id='configuring-wmcc-cli'>Configuring WMCC CLI</h2><pre class="highlight shell tab-shell"><code><span class="c"># You can use config file</span>
+wmcc cli --config /full/path/to/wmcc.conf
+
+<span class="c"># Or with prefix (which will later load wmcc.conf file from the directory)</span>
+wmcc cli --prefix /full/path/to/wmcc/dir
+
+<span class="c"># You can configure it by passing arguments:</span>
+wmcc cli --network<span class="o">=</span>mainnet info
+wmcc cli info --network<span class="o">=</span>mainnet
+
+<span class="c"># Or use ENV variables (Starting with WMCC_)</span>
+<span class="nb">export </span><span class="nv">WMCC_NETWORK</span><span class="o">=</span>mainnet
+<span class="nb">export </span><span class="nv">WMCC_API_KEY</span><span class="o">=</span>yoursecret
+wmcc cli info
+</code></pre>
+<p><code>wmcc cli</code> can be configured with many params:</p>
+<h3 id='general-configurations-are'>General configurations are:</h3>
+<table><thead>
+<tr>
+<th>Config</th>
+<th>Options</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>prefix</td>
+<td>dir path</td>
+<td>This accepts directory where DBs and <code>wmcc.conf</code> are located.</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>network</td>
+<td><code>mainnet</code></td>
+<td>This will configure which network to load, also where to look for config file</td>
+</tr>
+<tr>
+<td>uri, url</td>
+<td>Base HTTP URI</td>
+<td>This can be used for custom port</td>
+</tr>
+<tr>
+<td>api-key</td>
+<td>secret</td>
+<td>Secret used by RPC for auth.</td>
+</tr>
+</tbody></table>
+<h3 id='wallet-specific'>Wallet Specific</h3>
+<table><thead>
+<tr>
+<th>Config</th>
+<th>Options</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>primary, custom</td>
+<td>specify which account to use by default</td>
+</tr>
+<tr>
+<td>token</td>
+<td>token str</td>
+<td>Token specific wallet</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="notice">
+Some commands might accept additional parameters.
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='using-javascript-client'>Using Javascript Client</h2><pre class="highlight javascript tab-javascript--"><code><span class="kr">const</span> <span class="nx">Core</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wmcc-core'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">Client</span> <span class="o">=</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">Wallet</span> <span class="o">=</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">;</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span><span class="p">,</span>
+  <span class="na">uri</span><span class="p">:</span> <span class="s1">'http://localhost:7880'</span>
+<span class="p">});</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">wallet</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wallet</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span><span class="p">,</span>
+  <span class="na">uri</span><span class="p">:</span> <span class="s1">'http://localhost:7880'</span><span class="p">,</span>
+  <span class="na">id</span><span class="p">:</span> <span class="s1">'primary'</span>
+<span class="p">});</span>
+</code></pre>
+<p>You can also use api with Javascript Library (used by <code>wmcc cli</code>). There are two objects: <code>Core.http.Client</code> for general API and <code>Core.http.Wallet</code> for wallet API.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<p><code>Core.http.Client</code> options:</p>
+
+<table><thead>
+<tr>
+<th>Config</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>network</td>
+<td>mainnet</td>
+<td>Network to use (doesn&#39;t lookup configs by itself)</td>
+</tr>
+<tr>
+<td>uri</td>
+<td>String</td>
+<td>URI of the service</td>
+</tr>
+<tr>
+<td>apiKey</td>
+<td>String</td>
+<td>api secret</td>
+</tr>
+</tbody></table>
+
+<p><code>Core.http.Wallet</code> options:</p>
+
+<table><thead>
+<tr>
+<th>Config</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>network</td>
+<td>mainnet</td>
+<td>Network to use (doesn&#39;t lookup configs by itself)</td>
+</tr>
+<tr>
+<td>uri</td>
+<td>String</td>
+<td>URI of the service</td>
+</tr>
+<tr>
+<td>apiKey</td>
+<td>String</td>
+<td>api secret</td>
+</tr>
+<tr>
+<td>id</td>
+<td>primary, custom</td>
+<td>specify which account to use by default</td>
+</tr>
+<tr>
+<td>token</td>
+<td>token str</td>
+<td>Token specific wallet</td>
+</tr>
+</tbody></table>
+<h1 id='node'>Node</h1><h2 id='json-rpc-requests'>JSON-RPC Requests</h2><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span> <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{ "method": "getblockchaininfo", "params": [] }'</span>
+</code></pre>
+<p>Route for JSON-RPC requests, most of which mimic the bitcoind RPC calls completely.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /</code></p>
+
+<p>More about RPC Requests in RPC Docs.</p>
+<h2 id='get-server-info'>Get server info</h2><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span>/
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>wmcc cli info
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">info</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">getInfo</span><span class="p">();</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">info</span><span class="p">);</span>
+
+  <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1.0.0-beta.1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"network"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mainnet"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"chain"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">37766</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000000064cabec0739edc60c976bb6be8175f0631dfcd6a908b61545f63c6"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"progress"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"pool"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"115.164.83.225"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">8880</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"agent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/wmcc:v1.0.0-beta.1/"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"services"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1001"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"outbound"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"inbound"</span><span class="p">:</span><span class="w"> </span><span class="mi">58</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"mempool"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"tx"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"uptime"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"system"</span><span class="p">:</span><span class="w"> </span><span class="mi">1519816083</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"adjusted"</span><span class="p">:</span><span class="w"> </span><span class="mi">1519816132</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">49</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"memory"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">98</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jsHeap"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jsHeapTotal"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nativeHeap"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"external"</span><span class="p">:</span><span class="w"> </span><span class="mi">62</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<p>Get server Info.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p>Get server info. No params.</p>
+
+<p><code>GET /</code></p>
+
+<p>No Params.</p>
+<h2 id='get-mempool-snapshot'>Get mempool snapshot</h2><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span>/mempool
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>wmcc cli mempool
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">mempoolTxs</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">getMempool</span><span class="p">();</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mempoolTxs</span><span class="p">);</span>
+
+  <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="s2">"58a16a5ad4baaf061360ae2cf8ed3fb1fff53d46394a245721166df444c88427"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ef54e616f21d517bb7f5bf690892afc4a64313a910f176e9f329767bc89067fc"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"e0e7b6a6354b9dd85b019536d6636a2ec56cedaf5f6fca7dda9ad96abafac298"</span><span class="p">,</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Get mempool snapshot (array of json txs).</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /mempool</code></p>
+
+<p>No Params.</p>
+<h2 id='get-block-by-hash-or-height'>Get block by hash or height</h2><pre class="highlight shell tab-shell--cURL"><code><span class="nv">blockHash</span><span class="o">=</span><span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span>;
+<span class="nv">blockHeight</span><span class="o">=</span><span class="s1">'1000'</span>;
+
+curl <span class="nv">$url</span>/block/<span class="nv">$blockHash</span> <span class="c"># by hash</span>
+curl <span class="nv">$url</span>/block/<span class="nv">$blockHeight</span> <span class="c"># by height</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code><span class="nv">blockHash</span><span class="o">=</span><span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span>;
+<span class="nv">blockHeight</span><span class="o">=</span><span class="s1">'1000'</span>;
+
+wmcc cli block <span class="nv">$blockHash</span> <span class="c"># by hash</span>
+wmcc cli block <span class="nv">$blockHeight</span> <span class="c"># by height</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">blockHash</span><span class="o">=</span><span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">blockHeight</span><span class="o">=</span><span class="s1">'1000'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">blockByHash</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">getBlock</span><span class="p">(</span><span class="nx">blockHash</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">blockByHeight</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">getBlock</span><span class="p">(</span><span class="nx">blockHeight</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">blockByHash</span><span class="p">,</span> <span class="nx">blockByHeight</span><span class="p">);</span>
+
+  <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">536870928</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"prevBlock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000067fb4774fb96629f2432ed346f996bdd574cbdcca2756fef29fc31ec242"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"merkleRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2ce43b45c4ba096251124c62a654aab15bbe4c33cb9b1254841d11c7238083e2"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1513786020</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"bits"</span><span class="p">:</span><span class="w"> </span><span class="mi">504365040</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">231774</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"txs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2ce43b45c4ba096251124c62a654aab15bbe4c33cb9b1254841d11c7238083e2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"witnessHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"96b8e9877e0e025157c27818d18aa7c58192500ac051d6457474c5a3678e1b05"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"mtime"</span><span class="p">:</span><span class="w"> </span><span class="mi">1519816880</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"inputs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"prevout"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000000000000000000000000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">4294967295</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"script"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02e803126d696e656420627920776d63635f636f72650457e3f57b080000000000000000"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"witness"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01200000000000000000000000000000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="mi">4294967295</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"outputs"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5000000000</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"script"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00148dca4b88efee49e6756ba2ed09e1e27e994a679e"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wc1q3h9yhz80aey7vatt5tksnc0z06v55eu78dqwxt"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">500000000</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"script"</span><span class="p">:</span><span class="w"> </span><span class="s2">"76a914456c9dc895ca8bc6e6bae8ca8f2a8a29018ca57d88ac"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WV17cxcpPmNNJYuFp7nkNoXJ75uZj11zTC"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"script"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6a24aa21a9ede2f61c3f71d1defd3fa999dfa36953755c690689799962b48bebd836974e8cf9"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"locktime"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"hex"</span><span class="p">:</span><span class="w"> </span><span class="s2">"010000000001010000000000000000000000000000000000000000000000000000000000000000ffffffff2402e803126..."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Returns block info by block hash or height.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET /block/:blockhashOrHeight</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -389,38 +774,48 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>:blockhashOrHeight</td>
+<td>Hash or Height of block</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='broadcast-transaction'>Broadcast transaction</h2><pre class="highlight shell tab-shell--cURL"><code><span class="nv">tx</span><span class="o">=</span><span class="s1">'0100000001c3f71d1defd642062799dc895ca8bc6e6b1e27e994ca8bc6e6ba799962b48b...'</span>;
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+curl <span class="nv">$url</span>/broadcast <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{ "tx": "'</span><span class="nv">$tx</span><span class="s1">'" }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code><span class="nv">tx</span><span class="o">=</span><span class="s1">'0100000001c3f71d1defd642062799dc895ca8bc6e6b1e27e994ca8bc6e6ba799962b48b...'</span>;
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+wmcc cli broadcast <span class="nv">$tx</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">tx</span><span class="o">=</span><span class="s1">'0100000001c3f71d1defd642062799dc895ca8bc6e6b1e27e994ca8bc6e6ba799962b48b...'</span><span class="p">;</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
+
+  <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">broadcast</span><span class="p">(</span><span class="nx">tx</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+
+  <span class="nx">await</span> <span class="nx">client</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p>Broadcast a transaction by adding it to the node&#39;s mempool. If mempool verification fails, the node will still forcefully advertise and relay the transaction for the next 60 seconds.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST /broadcast</code></p>
+<h3 id='post-parameters-json'>POST Parameters (JSON)</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -428,74 +823,646 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>tx</td>
+<td>transaction hash</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<h1 id='rpc-calls-node'>RPC Calls - Node</h1><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{ "method": "methodname", "params": [...] "id": "some-id" }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>wmcc cli rpc params...
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
 
-<p>The Kittn API uses the following error codes:</p>
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'MethodName'</span><span class="p">,</span> <span class="p">[</span> <span class="p">...</span><span class="nx">params</span> <span class="p">]);</span>
+  <span class="c1">// RES will return "result" part of the object, not the id or error</span>
 
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// error will be thrown.</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="err">resultObject</span><span class="w"> </span><span class="p">,</span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="err">errorObject</span><span class="p">,</span><span class="w"> </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="err">passedID</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p><code>Further examples</code> will only include &quot;result&quot; part.</p>
+</blockquote>
+
+<p>WMCC RPC calls mimic Bitcoin Core&#39;s RPC. This is documentation how to use it with <code>wmcc-core</code>.</p>
+
+<p>RPC Calls are accepted at: <code>POST /</code></p>
+
+<aside class="notice">
+Note: wmcc cli rpc and javascript will return error OR result.
+</aside>
+<h3 id='post-parameters-rpc'>POST Parameters RPC</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>method</td>
+<td>Name of the RPC call</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>params</td>
+<td>Parameters accepted by method</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>id</td>
+<td>Will be returned with the response (Shouldn&#39;t be object)</td>
 </tr>
 </tbody></table>
+<h2 id='stop'>stop</h2><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{ "method": "stop" }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>wmcc cli rpc stop
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
 
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'stop'</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="s2">"Stopping."</span><span class="w">
+</span></code></pre>
+<p>Stops the running node.</p>
+<h3 id='params'>Params</h3>
+<table><thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td>None</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='getinfo'>getinfo</h2><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{
+    "method": "getinfo",
+    "params": []
+  }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>wmcc cli rpc getinfo
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'getinfo'</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1.0.0-beta.1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"protocolversion"</span><span class="p">:</span><span class="w"> </span><span class="mi">70015</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"walletversion"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"blocks"</span><span class="p">:</span><span class="w"> </span><span class="mi">38432</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"timeoffset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"connections"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"proxy"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="mf">689.0484608679707</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"testnet"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"keypoololdest"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"keypoolsize"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"unlocked_until"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"paytxfee"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"relayfee"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00001</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Returns general info.</p>
+<h3 id='params-2'>Params</h3>
+<table><thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td>None</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='getmemoryinfo'>getmemoryinfo</h2><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{
+    "method": "getmemoryinfo",
+    "params": []
+  }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>wmcc cli rpc getmemoryinfo
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'getmemoryinfo'</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">62</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"jsHeap"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"jsHeapTotal"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"nativeHeap"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"external"</span><span class="p">:</span><span class="w"> </span><span class="mi">62</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Returns Memory usage info.</p>
+<h3 id='params-3'>Params</h3>
+<table><thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td>None</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='setloglevel'>setloglevel</h2><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{
+    "method": "setloglevel",
+    "params": [ "none" ]
+  }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>wmcc cli rpc setloglevel none
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'setloglevel'</span><span class="p">,</span> <span class="p">[</span> <span class="s1">'none'</span> <span class="p">]);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="kc">null</span><span class="w">
+</span></code></pre>
+<p>Change Log level of the running node.</p>
+
+<p>Levels are: <code>NONE</code>, <code>ERROR</code>, <code>WARNING</code>, <code>INFO</code>, <code>DEBUG</code>, <code>SPAM</code></p>
+<h3 id='params-4'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>level</td>
+<td>Required</td>
+<td>Level for the logger</td>
+</tr>
+</tbody></table>
+<h2 id='validateaddress'>validateaddress</h2><pre class="highlight shell tab-shell--cURL"><code><span class="nv">address</span><span class="o">=</span><span class="s1">'wc1qg0325qf07mysegu5qeuupf5zr38yrcsrkqhnav'</span>;
+
+curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{
+    "method": "validateaddress",
+    "params": [ "'</span><span class="nv">$address</span><span class="s1">'" ]
+  }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code><span class="nv">address</span><span class="o">=</span><span class="s1">'wc1qg0325qf07mysegu5qeuupf5zr38yrcsrkqhnav'</span>;
+
+wmcc cli rpc validateaddress <span class="nv">$address</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">address</span> <span class="o">=</span> <span class="s1">'wc1qg0325qf07mysegu5qeuupf5zr38yrcsrkqhnav'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'validateaddress'</span><span class="p">,</span> <span class="p">[</span> <span class="nx">address</span> <span class="p">]);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"isvalid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wc1qg0325qf07mysegu5qeuupf5zr38yrcsrkqhnav"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scriptPubKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"001443e2aa012ff6c90ca3940679c0a6821c4e41e203"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ismine"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"iswatchonly"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Validates address.</p>
+<h3 id='params-5'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>address</td>
+<td>Required</td>
+<td>Address to validate</td>
+</tr>
+</tbody></table>
+<h2 id='createmultisig'>createmultisig</h2><pre class="highlight shell tab-shell--cURL"><code>later
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>later
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">later</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">later</span><span class="w">
+</span></code></pre>
+<p>Create multisig address.</p>
+<h3 id='params-6'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>nrequired</td>
+<td>Required</td>
+<td>Required number of approvals for spending</td>
+</tr>
+<tr>
+<td style="text-align: center">2</td>
+<td>keyArray</td>
+<td>Required</td>
+<td>Array of public keys</td>
+</tr>
+</tbody></table>
+<h2 id='createwitnessaddress'>createwitnessaddress</h2><pre class="highlight shell tab-shell--cURL"><code>later
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>later
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">later</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">later</span><span class="w">
+</span></code></pre>
+<p>Creates witness address.</p>
+<h3 id='params-7'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>script</td>
+<td>Required</td>
+<td>WMCC script.</td>
+</tr>
+</tbody></table>
+<h2 id='signmessagewithprivkey'>signmessagewithprivkey</h2><pre class="highlight shell tab-shell--cURL"><code>later
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>later
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">later</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">later</span><span class="w">
+</span></code></pre>
+<p>Signs message with private key.</p>
+<h3 id='params-8'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>privkey</td>
+<td>Required</td>
+<td>Private key</td>
+</tr>
+<tr>
+<td style="text-align: center">2</td>
+<td>message</td>
+<td>Required</td>
+<td>Message you want to sign.</td>
+</tr>
+</tbody></table>
+<h2 id='verifymessage'>verifymessage</h2><pre class="highlight shell tab-shell--cURL"><code>later
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>later
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">later</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">later</span><span class="w">
+</span></code></pre>
+<p>Verify a message.</p>
+<h3 id='params-9'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>address</td>
+<td>Required</td>
+<td>Address of the signer</td>
+</tr>
+<tr>
+<td style="text-align: center">2</td>
+<td>signature</td>
+<td>Required</td>
+<td>Signature of signed message</td>
+</tr>
+<tr>
+<td style="text-align: center">3</td>
+<td>message</td>
+<td>Required</td>
+<td>Message that was signed</td>
+</tr>
+</tbody></table>
+<h2 id='setmocktime'>setmocktime</h2><pre class="highlight shell tab-shell--cURL"><code><span class="nv">timestamp</span><span class="o">=</span>1519880400;
+
+curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{
+    "method": "setmocktime",
+    "params": [ '</span><span class="nv">$timestamp</span><span class="s1">' ]
+  }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code><span class="nv">timestamp</span><span class="o">=</span>1519880400;
+
+wmcc cli rpc setmocktime <span class="nv">$timestamp</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+<span class="kr">const</span> <span class="nx">timestamp</span> <span class="o">=</span> <span class="mi">1519880400</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'setmocktime'</span><span class="p">,</span> <span class="p">[</span> <span class="nx">timestamp</span> <span class="p">]);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON &quot;result&quot; like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="kc">null</span><span class="w">
+</span></code></pre>
+<p>Changes network time (This is consensus-critical).</p>
+<h3 id='params-10'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>timestamp</td>
+<td>Required</td>
+<td>timestamp to change to</td>
+</tr>
+</tbody></table>
+<h1 id='rpc-calls-chain'>RPC Calls - Chain</h1><h2 id='pruneblockchain'>pruneblockchain</h2><pre class="highlight shell tab-shell--cURL"><code>curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{
+    "method": "pruneblockchain",
+    "params": []
+  }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code>wmcc cli rpc pruneblockchain
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'pruneblockchain'</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="kc">null</span><span class="w">
+</span></code></pre>
+<p>Prunes the blockchain, it will keep blocks specified in Network Configurations.</p>
+<h3 id='default-prune-options'>Default Prune Options</h3>
+<table><thead>
+<tr>
+<th>Network</th>
+<th>keepBlocks</th>
+<th>pruneAfter</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>main</td>
+<td>288</td>
+<td>1000</td>
+</tr>
+</tbody></table>
+<h3 id='params'>Params</h3>
+<table><thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+<td>None</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='invalidateblock'>invalidateblock</h2><pre class="highlight shell tab-shell--cURL"><code><span class="nv">blockhash</span><span class="o">=</span><span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span>;
+
+curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{
+    "method": "invalidateblock",
+    "params": [ "'</span><span class="nv">$blockhash</span><span class="s1">'" ]
+  }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code><span class="nv">blockhash</span><span class="o">=</span><span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span>;
+
+wmcc cli rpc invalidateblock <span class="nv">$blockhash</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">blockhash</span> <span class="o">=</span> <span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'invalidateblock'</span><span class="p">,</span> <span class="p">[</span> <span class="nx">blockhash</span> <span class="p">]);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="kc">null</span><span class="w">
+</span></code></pre>
+<p>Invalidates the block in the chain. It will rewind network to blockhash and invalidate it.</p>
+
+<p>It won&#39;t accept that block as valid <em>Invalidation will work while running, restarting node will remove invalid block from list.</em></p>
+<h3 id='params-2'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>blockhash</td>
+<td>Required</td>
+<td>Block&#39;s hash</td>
+</tr>
+</tbody></table>
+<h2 id='reconsiderblock'>reconsiderblock</h2><pre class="highlight shell tab-shell--cURL"><code><span class="nv">blockhash</span><span class="o">=</span><span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span>;
+
+curl <span class="nv">$url</span>/ <span class="se">\</span>
+  -H <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+  -X POST <span class="se">\</span>
+  --data <span class="s1">'{
+    "method": "reconsiderblock",
+    "params": [ "'</span><span class="nv">$blockhash</span><span class="s1">'" ]
+  }'</span>
+</code></pre><pre class="highlight shell tab-shell--CLI"><code><span class="nv">blockhash</span><span class="o">=</span><span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span>;
+
+wmcc cli rpc reconsiderblock <span class="nv">$blockhash</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">blockhash</span> <span class="o">=</span> <span class="s1">'00000f010aabd27b067361a8d8bde8dc320ccb237c17797028eb41b00e7dca38'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">rpc</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Core</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">RPCClient</span><span class="p">({</span>
+  <span class="na">network</span><span class="p">:</span> <span class="s1">'mainnet'</span>
+<span class="p">});</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">rpc</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="s1">'reconsiderblock'</span><span class="p">,</span> <span class="p">[</span> <span class="nx">blockhash</span> <span class="p">]);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">})().</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">.</span><span class="nx">stack</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="kc">null</span><span class="w">
+</span></code></pre>
+<p>This rpc command will remove block from invalid block set.</p>
+<h3 id='params-3'>Params</h3>
+<table><thead>
+<tr>
+<th style="text-align: center">#</th>
+<th>Name</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td>blockhash</td>
+<td>Required</td>
+<td>Block&#39;s hash</td>
+</tr>
+</tbody></table>
+<h1 id='rpc-calls-block'>RPC Calls - Block</h1><h1 id='rpc-calls-mempool'>RPC Calls - Mempool</h1><h1 id='rpc-calls-transactions'>RPC Calls - Transactions</h1><h1 id='rpc-calls-mining'>RPC Calls - Mining</h1><h1 id='rpc-calls-network'>RPC Calls - Network</h1><h1 id='coin'>Coin</h1><h1 id='transaction'>Transaction</h1><h1 id='wallet-admin'>Wallet Admin</h1><h1 id='wallet'>Wallet</h1><h1 id='wallet-transactions'>Wallet Transactions</h1><h1 id='wallet-accounts'>Wallet Accounts</h1><h1 id='wallet-events'>Wallet Events</h1><h1 id='errors'>Errors</h1>
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="shell--cURL">CURL</a>
+                <a href="#" data-language-name="shell--CLI">CLI</a>
+                <a href="#" data-language-name="javascript">Javascript</a>
           </div>
       </div>
     </div>
