@@ -83,10 +83,10 @@ html, body {
     position: relative;
 
     input {
-      background: $nav-search-bg;
+      background: transparent;
       border-width: 0 0 1px 0;
       border-color: $search-box-border-color;
-      padding: 6px 0 6px 20px;
+      padding: 6px 0 6px 25px;
       box-sizing: border-box;
       margin: $nav-v-padding $nav-padding;
       width: $nav-width - 30;
@@ -97,8 +97,9 @@ html, body {
 
     &:before {
       position: absolute;
-      top: 17px;
+      top: 20px;
       left: $nav-padding;
+      padding: 0 5px;
       color: $nav-text;
       @extend %icon-search;
     }
@@ -475,7 +476,7 @@ html, body {
     }
 
     &.notice3 {
-      background-color: $aside-notice2-bg;
+      background-color: $aside-notice3-bg;
     }
 
     &.warning {
@@ -629,4 +630,25 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

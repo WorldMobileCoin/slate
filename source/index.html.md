@@ -13,12 +13,12 @@ toc_footers:
 includes:
   - node
   - rpc-node
+  - rpc-network
   - rpc-chain
   - rpc-block
   - rpc-mempool
   - rpc-txn
   - rpc-mining
-  - rpc-network
   - coin
   - transaction
   - wallet-admin
@@ -73,11 +73,11 @@ const wallet = new Core.http.Wallet({
 Auth is accomplished via HTTP Basic Auth, using your node's API key (passed via --api-key).
 
 <aside class="notice">
-You must replace `[api-key]` with your personal API key.
+You must replace <code>[api-key]</code> with your personal API key.
 </aside>
 
 <aside class="notice2">
-If you intend to use API via network and setup `api-key`, make sure to setup `ssl` too.
+If you intend to use API via network and setup <code>api-key</code>, make sure to setup <code>ssl</code> too.
 </aside>
 
 # Configuring Clients
