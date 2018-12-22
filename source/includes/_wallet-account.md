@@ -5,8 +5,27 @@
 > An account object looks like this:
 
 ```json
-later
-
+{
+  "wid": 1,
+  "id": "my_wallet",
+  "name": "default",
+  "initialized": true,
+  "witness": true,
+  "watchOnly": false,
+  "type": "pubkeyhash",
+  "m": 1,
+  "n": 1,
+  "accountIndex": 0,
+  "receiveDepth": 15,
+  "changeDepth": 1,
+  "nestedDepth": 1,
+  "lookahead": 0,
+  "receiveAddress": "wc1qxd72nvknaumlrux8nzsqhm2zgxx5u9w0uamxur",
+  "nestedAddress": "XHkZVbxqfvjHkh7DqUC537Kp3xE5LYzjex",
+  "changeAddress": "wc1qgc3ear4vddvjypcupympm2s2rcupxk8c4wqemf",
+  "accountKey": "xpub6CB49PLkxvx8iL8YK3a5NrL8H5LQvPxoPXyoTvEy2aWfw3XquUgcDjhXs4mXrxZNgMevdaY3xMkPXDd2fgX3Nw6uyGXxamyFdazJ565xJ76",
+  "keys": []
+}
 ```
 
 Account belonging to a Wallet.
@@ -51,7 +70,9 @@ const client = new Core.http.Client({
 > The above command returns JSON "result" like this:
 
 ```json
-later
+[
+  "default"
+]
 ```
 
 List all account names (array indices map directly to bip44 account indices) associated with a specific wallet id.
@@ -108,7 +129,27 @@ const client = new Core.http.Client({
 > The above command returns JSON "result" like this:
 
 ```json
-later
+{
+  "wid": 1,
+  "id": "my_wallet",
+  "name": "default",
+  "initialized": true,
+  "witness": true,
+  "watchOnly": false,
+  "type": "pubkeyhash",
+  "m": 1,
+  "n": 1,
+  "accountIndex": 0,
+  "receiveDepth": 15,
+  "changeDepth": 1,
+  "nestedDepth": 1,
+  "lookahead": 0,
+  "receiveAddress": "wc1qxd72nvknaumlrux8nzsqhm2zgxx5u9w0uamxur",
+  "nestedAddress": "XHkZVbxqfvjHkh7DqUC537Kp3xE5LYzjex",
+  "changeAddress": "wc1qgc3ear4vddvjypcupympm2s2rcupxk8c4wqemf",
+  "accountKey": "xpub6CB49PLkxvx8iL8YK3a5NrL8H5LQvPxoPXyoTvEy2aWfw3XquUgcDjhXs4mXrxZNgMevdaY3xMkPXDd2fgX3Nw6uyGXxamyFdazJ565xJ76",
+  "keys": []
+}
 ```
 
 Get account info.

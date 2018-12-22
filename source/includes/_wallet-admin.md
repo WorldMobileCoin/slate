@@ -175,7 +175,6 @@ const client = new Core.http.Client({
 
 ```json
 [
-  "primary",
   "my_wallet"
 ]
 ```
